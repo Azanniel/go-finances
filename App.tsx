@@ -10,7 +10,7 @@ import {
 } from '@expo-google-fonts/poppins';
 
 import theme from './src/global/styles/theme';
-import { Dashboard } from './src/screens/Dashboard';
+import { Register } from './src/screens/Register';
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -34,7 +34,7 @@ export default function App() {
         translucent
         barStyle="light-content"
       />
-      <Dashboard />
+      <Register />
     </ThemeProvider>
   );
 }
