@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { 
   Alert,
   Modal,
-  Keyboard,
-  TouchableWithoutFeedback
+  Keyboard
 } from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
@@ -89,6 +89,8 @@ export function Register() {
 
   return (
     <TouchableWithoutFeedback
+      style={{flex: 1}}
+      containerStyle={{flex: 1}}
       onPress={Keyboard.dismiss}
     >
       <Container>
