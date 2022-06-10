@@ -8,7 +8,7 @@ import {
 
 interface Props {
   title: string;
-  onPress?: () => void;
+  onPress: () => void;
 }
 
 export function CategorySelectButton({ title, onPress }: Props) {
