@@ -1,9 +1,9 @@
-import styled from 'styled-components/native';
+import { Feather } from '@expo/vector-icons';
 import { FlatList, FlatListProps } from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
-import { Feather } from '@expo/vector-icons';
 import { getBottomSpace, getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
+import styled from 'styled-components/native';
 
 import { DataListProps } from '.';
 
@@ -104,3 +104,9 @@ export const TransactionList = styled(
     paddingBottom: getBottomSpace() + 10
   }
 })``;
+
+export const LoadContainer = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;
