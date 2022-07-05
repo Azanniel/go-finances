@@ -16,6 +16,7 @@ import { ThemeProvider } from 'styled-components';
 
 import theme from './src/global/styles/theme';
 // import { AppRoutes } from './src/routes/app.routes';
+import { AuthProvider } from './src/hooks/auth';
 import { SignIn } from './src/screens/SignIn';
 
 export default function App() {
@@ -36,11 +37,12 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <NavigationContainer>
-          {/* <AppRoutes /> */}
-          <SignIn />
-        </NavigationContainer>
-
+        <AuthProvider>
+          <NavigationContainer>
+            {/* <AppRoutes /> */}
+            <SignIn />
+          </NavigationContainer>
+        </AuthProvider>
 
         <StatusBar
           backgroundColor="transparent"
