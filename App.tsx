@@ -7,7 +7,6 @@ import {
   Poppins_500Medium,
   Poppins_700Bold, useFonts
 } from '@expo-google-fonts/poppins';
-import { NavigationContainer } from '@react-navigation/native';
 import * as SplashScreen from 'expo-splash-screen';
 import React from 'react';
 import { StatusBar } from 'react-native';
@@ -15,9 +14,8 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
 
 import theme from './src/global/styles/theme';
-// import { AppRoutes } from './src/routes/app.routes';
 import { AuthProvider } from './src/hooks/auth';
-import { SignIn } from './src/screens/SignIn';
+import { Routes } from './src/routes';
 
 export default function App() {
   SplashScreen.preventAutoHideAsync();
@@ -38,10 +36,7 @@ export default function App() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
         <AuthProvider>
-          <NavigationContainer>
-            {/* <AppRoutes /> */}
-            <SignIn />
-          </NavigationContainer>
+          <Routes />
         </AuthProvider>
 
         <StatusBar
