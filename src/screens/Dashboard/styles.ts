@@ -7,6 +7,10 @@ import styled from 'styled-components/native';
 
 import { DataListProps } from '.';
 
+interface ButtonProps {
+  children: React.ReactNode;
+}
+
 export const Container = styled.View`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.background};
@@ -62,7 +66,7 @@ export const UserName = styled.Text`
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
-export const LogoutButton = styled(BorderlessButton)``;
+export const LogoutButton = styled(BorderlessButton)<ButtonProps>``;
 
 export const Icon = styled(Feather)`
   color: ${({ theme }) => theme.colors.secondary};

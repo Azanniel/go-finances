@@ -2,16 +2,16 @@ import 'intl';
 import 'intl/locale-data/jsonp/pt-BR';
 import 'react-native-gesture-handler';
 
+import React from 'react';
 import {
   Poppins_400Regular,
   Poppins_500Medium,
   Poppins_700Bold, useFonts
 } from '@expo-google-fonts/poppins';
 import * as SplashScreen from 'expo-splash-screen';
-import React from 'react';
-import { StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
+import { StatusBar } from 'expo-status-bar';
 
 import theme from './src/global/styles/theme';
 import { AuthProvider } from './src/hooks/auth';
@@ -42,7 +42,7 @@ export default function App() {
         <StatusBar
           backgroundColor="transparent"
           translucent
-          barStyle="light-content"
+          style='light'
         />
       </ThemeProvider>
     </GestureHandlerRootView>

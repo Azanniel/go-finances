@@ -3,6 +3,10 @@ import { BorderlessButton } from 'react-native-gesture-handler';
 import { RFValue } from "react-native-responsive-fontsize";
 import styled from "styled-components/native";
 
+interface ButtonProps {
+  children: React.ReactNode;
+}
+
 export const Container = styled.View`
   flex: 1;
   background-color: ${({ theme }) => theme.colors.background};
@@ -42,7 +46,7 @@ export const MonthSelect = styled.View`
   margin-top: 24px;
 `;
 
-export const MonthSelectButton = styled(BorderlessButton)``;
+export const MonthSelectButton = styled(BorderlessButton)<ButtonProps>``;
 
 export const MonthSelectIcon = styled(Feather)`
   font-size: ${RFValue(24)}px;
