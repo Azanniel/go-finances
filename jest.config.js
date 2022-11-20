@@ -5,11 +5,17 @@ module.exports = {
     "/android",
     "/ios"
   ],
+  setupFiles: ["./jestSetupFile.js"],
   setupFilesAfterEnv: [
     "@testing-library/jest-native/extend-expect",
     "jest-styled-components"
   ],
-  transformIgnorePatterns: [
-    "node_modules/(?!(@react-native|react-native|react-native-vector-icons|react-native-iphone-x-helper|react-native-responsive-fontsize)/)",
+  collectCoverage: true,
+  collectCoverageFrom: [
+    "src/**/*.tsx",
+    "!src/**/*.spec.tsx"
   ],
+  coverageReporters: [
+    "lcov"
+  ]
 }
