@@ -81,16 +81,13 @@ export const HighLightCards = styled.ScrollView.attrs({
   }
 })`
   width: 100%;
-  margin-top: ${RFPercentage(20)}px;
-  
-  position: absolute;
+  margin-top: -${RFPercentage(20)}px;
 `;
 
 export const Transactions = styled.View`
-  flex: 1;
   padding: 0 24px;
 
-  margin-top: ${RFPercentage(14)}px;
+  margin-top: ${RFPercentage(6)}px;
 `;
 
 export const Title = styled.Text`
@@ -105,7 +102,7 @@ export const TransactionList = styled(
 ).attrs({
   showsVerticalScrollIndicator: false,
   contentContainerStyle: {
-    paddingBottom: getBottomSpace() + 10
+    paddingBottom: getBottomSpace() + 10,
   }
 })``;
 
@@ -113,4 +110,8 @@ export const LoadContainer = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
+`;
+
+export const WrapperTransaction = styled.View`
+  padding: 0 24px;
 `;

@@ -4,7 +4,6 @@ import * as AppleAuthentication from 'expo-apple-authentication';
 import * as AuthSession from 'expo-auth-session';
 
 const { CLIENT_ID } = process.env;
-const { REDIRECT_URI } = process.env;
 
 interface AuthProviderProps {
   children: ReactNode
@@ -44,6 +43,7 @@ function AuthProvider({children}: AuthProviderProps) {
     try {
       const RESPONSE_TYPE = 'token';
       const SCOPE = encodeURI('profile email');
+      const REDIRECT_URI = AuthSession.makeRedirectUri({ useProxy: true });
 
       const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=${SCOPE}`;
 
